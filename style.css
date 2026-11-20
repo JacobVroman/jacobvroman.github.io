@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+
+    background: #0f111a;
+    color: #e6e6e6;
+
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                 "Liberation Mono", "Courier New", monospace;
+}
+
+.blob {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+
+    filter: blur(120px);
+    opacity: 0.35;
+
+    animation: float 12s ease-in-out infinite;
+    z-index: 0;
+}
+
+.blob:nth-child(1) {
+    background: #3b82f6;
+    top: 10%;
+    left: 15%;
+}
+
+.blob:nth-child(2) {
+    background: #a855f7;
+    top: 40%;
+    left: 60%;
+    animation-duration: 14s;
+}
+
+.blob:nth-child(3) {
+    background: #22c55e;
+    top: 70%;
+    left: 30%;
+    animation-duration: 16s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(80px, -60px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px 20px;
+
+    text-align: center;
+}
+
+.site-header .container {
+    padding: 6px 6px;
+}
+
+.site-header {
+    position: relative;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.home-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 60;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.blog-link,
+.section-link {
+    position: fixed;
+    top: 12px;
+    left: 72px;
+    z-index: 60;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    color: #7aa2f7;
+    text-decoration: none;
+}
+
+.blog-link:hover,
+.section-link:hover {
+    text-decoration: underline;
+}
+
+.site-header {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+p {
+    color: #c9c9c9;
+    line-height: 1.6;
+    margin: 0 0 1rem 0; 
+}
+
+p + p {
+    margin-top: 1rem;
+}
+
+a {
+    color: #7aa2f7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-list li {
+    margin: 0.6rem 0;
+}
+
+.post-list li::marker {
+    display: none;
+}
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5rem auto;
+    box-sizing: border-box;
+}
+
+.post-page .container {
+    text-align: left;
+}
+
+.post-page .container p {
+    max-width: 640px;
+    margin: 0  auto 1rem;
+    text-align: left;
+}
